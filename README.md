@@ -1,2 +1,2 @@
 # My-First-iOS-App
-An audio recoding app for learning.
+An Audio Recoding app for purpose of learning.
