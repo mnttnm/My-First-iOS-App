@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ROq-sR-zgW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -107,50 +108,72 @@
                     <view key="view" contentMode="scaleToFill" id="LG9-m3-ZzV">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-yj-2St">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-yj-2St">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="slow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="74" y="136" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-ns-NQV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="267" y="136" width="46" height="30"/>
-                                </variation>
+                                <connections>
+                                    <action selector="snaleSoundPlayer:" destination="1Lr-Th-DnA" eventType="touchUpInside" id="mKY-Rp-hlW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHW-bH-8Eg">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="192" y="486" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xmo-3A-2XR"/>
+                                    <action selector="stopSoundPlay:" destination="1Lr-Th-DnA" eventType="touchUpInside" id="eYv-nU-1Gt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-bV-Zq2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rabitSpeedPlayer:" destination="1Lr-Th-DnA" eventType="touchUpInside" id="dTy-nk-81p"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TdX-yj-2St" firstAttribute="top" secondItem="pua-lo-70R" secondAttribute="bottom" constant="55" id="8no-8d-TVe"/>
+                            <constraint firstItem="VyS-Dp-mnK" firstAttribute="top" secondItem="DHW-bH-8Eg" secondAttribute="bottom" constant="64" id="QyQ-AF-xjM"/>
+                            <constraint firstAttribute="centerX" secondItem="DHW-bH-8Eg" secondAttribute="centerX" id="aZw-tx-gg0"/>
+                            <constraint firstItem="Z3M-bV-Zq2" firstAttribute="top" secondItem="pua-lo-70R" secondAttribute="bottom" constant="55" id="lK4-yC-aVK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z3M-bV-Zq2" secondAttribute="trailing" constant="32" id="rec-l9-rUN"/>
+                            <constraint firstItem="TdX-yj-2St" firstAttribute="leading" secondItem="LG9-m3-ZzV" secondAttribute="leadingMargin" constant="32" id="tVr-sK-O5P"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="TdX-yj-2St"/>
-                                <exclude reference="Fcc-ns-NQV"/>
                                 <exclude reference="DHW-bH-8Eg"/>
+                                <exclude reference="Z3M-bV-Zq2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8no-8d-TVe"/>
+                                <exclude reference="tVr-sK-O5P"/>
+                                <exclude reference="lK4-yC-aVK"/>
+                                <exclude reference="rec-l9-rUN"/>
+                                <exclude reference="aZw-tx-gg0"/>
+                                <exclude reference="QyQ-AF-xjM"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="TdX-yj-2St"/>
-                                <include reference="Fcc-ns-NQV"/>
                                 <include reference="DHW-bH-8Eg"/>
+                                <include reference="Z3M-bV-Zq2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8no-8d-TVe"/>
+                                <include reference="tVr-sK-O5P"/>
+                                <include reference="lK4-yC-aVK"/>
+                                <include reference="rec-l9-rUN"/>
+                                <include reference="aZw-tx-gg0"/>
+                                <include reference="QyQ-AF-xjM"/>
                             </mask>
                         </variation>
                     </view>
@@ -181,5 +204,7 @@
     <resources>
         <image name="Microphone" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
+        <image name="fast" width="100" height="100"/>
+        <image name="slow" width="100" height="100"/>
     </resources>
 </document>
