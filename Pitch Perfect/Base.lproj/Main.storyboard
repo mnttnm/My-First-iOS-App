@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ROq-sR-zgW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -42,7 +43,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="q5z-Fd-d78"/>
-                                    <segue destination="1Lr-Th-DnA" kind="show" id="WB0-bJ-Lie"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,10 +62,10 @@
                                 <exclude reference="hcb-Ds-PSV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="33Y-P8-RsY"/>
-                                <exclude reference="jh8-B4-njl"/>
                                 <exclude reference="dNP-je-v1q"/>
                                 <exclude reference="nCS-dh-Npi"/>
+                                <exclude reference="33Y-P8-RsY"/>
+                                <exclude reference="jh8-B4-njl"/>
                                 <exclude reference="SIV-ns-yme"/>
                                 <exclude reference="bau-s4-KRi"/>
                             </mask>
@@ -77,10 +77,10 @@
                                 <include reference="hcb-Ds-PSV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="33Y-P8-RsY"/>
-                                <include reference="jh8-B4-njl"/>
                                 <include reference="dNP-je-v1q"/>
                                 <include reference="nCS-dh-Npi"/>
+                                <include reference="33Y-P8-RsY"/>
+                                <include reference="jh8-B4-njl"/>
                                 <include reference="SIV-ns-yme"/>
                                 <include reference="bau-s4-KRi"/>
                             </mask>
@@ -91,6 +91,7 @@
                         <outlet property="recordButton" destination="YjV-gv-eoJ" id="Loo-lX-mJG"/>
                         <outlet property="recordingInProgress" destination="q0S-fc-XFi" id="dkI-Hf-j9K"/>
                         <outlet property="stopButton" destination="hcb-Ds-PSV" id="nRL-L6-sKH"/>
+                        <segue destination="1Lr-Th-DnA" kind="show" identifier="stopRecording" id="tsm-WJ-Fz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -106,6 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VyS-Dp-mnK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LG9-m3-ZzV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-yj-2St">
@@ -153,12 +155,12 @@
                                 <exclude reference="Z3M-bV-Zq2"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="QyQ-AF-xjM"/>
+                                <exclude reference="aZw-tx-gg0"/>
                                 <exclude reference="8no-8d-TVe"/>
                                 <exclude reference="tVr-sK-O5P"/>
                                 <exclude reference="lK4-yC-aVK"/>
                                 <exclude reference="rec-l9-rUN"/>
-                                <exclude reference="aZw-tx-gg0"/>
-                                <exclude reference="QyQ-AF-xjM"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -168,12 +170,12 @@
                                 <include reference="Z3M-bV-Zq2"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="QyQ-AF-xjM"/>
+                                <include reference="aZw-tx-gg0"/>
                                 <include reference="8no-8d-TVe"/>
                                 <include reference="tVr-sK-O5P"/>
                                 <include reference="lK4-yC-aVK"/>
                                 <include reference="rec-l9-rUN"/>
-                                <include reference="aZw-tx-gg0"/>
-                                <include reference="QyQ-AF-xjM"/>
                             </mask>
                         </variation>
                     </view>
