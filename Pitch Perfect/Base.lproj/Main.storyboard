@@ -138,10 +138,19 @@
                                     <action selector="rabitSpeedPlayer:" destination="1Lr-Th-DnA" eventType="touchUpInside" id="dTy-nk-81p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H0-8b-M6E">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VyS-Dp-mnK" firstAttribute="top" secondItem="7H0-8b-M6E" secondAttribute="bottom" constant="133" id="7io-0n-rTf"/>
                             <constraint firstItem="TdX-yj-2St" firstAttribute="top" secondItem="pua-lo-70R" secondAttribute="bottom" constant="55" id="8no-8d-TVe"/>
+                            <constraint firstItem="7H0-8b-M6E" firstAttribute="centerX" secondItem="TdX-yj-2St" secondAttribute="centerX" id="DjC-QU-JwM"/>
+                            <constraint firstItem="7H0-8b-M6E" firstAttribute="leading" secondItem="LG9-m3-ZzV" secondAttribute="leadingMargin" constant="5" id="Ii9-Wx-N4h"/>
                             <constraint firstItem="VyS-Dp-mnK" firstAttribute="top" secondItem="DHW-bH-8Eg" secondAttribute="bottom" constant="64" id="QyQ-AF-xjM"/>
                             <constraint firstAttribute="centerX" secondItem="DHW-bH-8Eg" secondAttribute="centerX" id="aZw-tx-gg0"/>
                             <constraint firstItem="Z3M-bV-Zq2" firstAttribute="top" secondItem="pua-lo-70R" secondAttribute="bottom" constant="55" id="lK4-yC-aVK"/>
@@ -153,9 +162,13 @@
                                 <exclude reference="TdX-yj-2St"/>
                                 <exclude reference="DHW-bH-8Eg"/>
                                 <exclude reference="Z3M-bV-Zq2"/>
+                                <exclude reference="7H0-8b-M6E"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="7io-0n-rTf"/>
                                 <exclude reference="QyQ-AF-xjM"/>
+                                <exclude reference="DjC-QU-JwM"/>
+                                <exclude reference="Ii9-Wx-N4h"/>
                                 <exclude reference="aZw-tx-gg0"/>
                                 <exclude reference="8no-8d-TVe"/>
                                 <exclude reference="tVr-sK-O5P"/>
@@ -168,9 +181,13 @@
                                 <include reference="TdX-yj-2St"/>
                                 <include reference="DHW-bH-8Eg"/>
                                 <include reference="Z3M-bV-Zq2"/>
+                                <include reference="7H0-8b-M6E"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="7io-0n-rTf"/>
                                 <include reference="QyQ-AF-xjM"/>
+                                <include reference="DjC-QU-JwM"/>
+                                <include reference="Ii9-Wx-N4h"/>
                                 <include reference="aZw-tx-gg0"/>
                                 <include reference="8no-8d-TVe"/>
                                 <include reference="tVr-sK-O5P"/>
@@ -206,6 +223,7 @@
     <resources>
         <image name="Microphone" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
     </resources>
